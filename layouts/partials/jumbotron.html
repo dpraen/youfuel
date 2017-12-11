@@ -1,0 +1,32 @@
+<style>    
+.bgx { 
+    
+    {{ if (isset .Params "backgroundimage") }}
+
+            background:url({{ .Params.Backgroundimage }});
+            {{ else }}
+            background:url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/aMgTA3g/filling-up-a-jerrycan-at-a-petrol-station-with-petrol-kerosene-or-gas_4kbzewxbg__F0000.png);
+            {{ end }} 
+            padding:20px;                  
+            
+}
+</style>
+<div class="jumbotron bgx">
+    <h1>
+            {{ if (isset .Params "title") }}
+            {{ .Params.Title }}            
+            {{ else }}
+            <strong style="color:white">Get fuel wherever you are</strong>
+            {{ end }}       
+    </h1>
+    <p>
+            {{ if (isset .Params "subtext") }}
+            {{ .Params.Subtext }}            
+            {{ else }}
+            <strong style="color:white">Don't wait for your fuel - get it delieverd to you.</strong>
+            {{ end }}       
+    </p>
+    <p>
+      <a class="btn btn-lg btn-primary" href="#" role="button">Get Fuel</a>
+    </p>
+</div>
